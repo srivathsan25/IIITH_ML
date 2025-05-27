@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loan Application Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='kingofstyle.css') }}" />
+</head>
+<body>
+  <header>Sri Renuka Associates
+     <img src="{{ url_for('static', filename='Padaiveedu.jpg') }}" alt="Logo" class="header-logo" />
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Loan Application Form</h1>
+      <form action="/submit" method="POST" id="loanForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required />
+
+        <label for="loan_amount">Loan Amount (Rupee) *</label>
+        <input type="number" id="loan_amount" name="loan_amount" min="100" required />
+
+        <label for="income">Annual Income (Rupee) *</label>
+        <input type="number" id="income" name="income" min="0" required />
+
+        <label for="employment_status">Employment Status *</label>
+        <select id="employment_status" name="employment_status" required>
+          <option value="">Select...</option>
+          <option value="employed">Employed</option>
+          <option value="self-employed">Self-employed</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="student">Student</option>
+          <option value="retired">Retired</option>
+        </select>
+
+        <label for="loan_purpose">Purpose of Loan *</label>
+        <textarea id="loan_purpose" name="loan_purpose" rows="4" required></textarea>
+
+        <button type="submit">Apply</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    Contact Number: 9790004450 &nbsp;&nbsp;|&nbsp;&nbsp; Email: 
+    <a href="mailto:svsmanian73@gmail.com">svsmanian73@gmail.com</a>
+  </footer>
+
+  <script src="{{ url_for('static', filename='scriptforlogic.js') }}"></script>
+</body>
+</html>

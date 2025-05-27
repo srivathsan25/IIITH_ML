@@ -1,0 +1,160 @@
+/* Body and layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(45deg, #fd7e14, #f6d365);
+  color: white;
+  padding: 20px 40px; /* added horizontal padding for spacing */
+  box-shadow: 0 4px 12px rgba(253, 126, 20, 0.5);
+  user-select: none;
+  flex-shrink: 0;
+
+  display: flex;           /* enable flexbox */
+  align-items: center;     /* vertically center items */
+  justify-content: space-between; /* space between text and image */
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Style for the logo image */
+.header-logo {
+  height: 100px;   /* set a suitable height */
+  width: auto;    /* keep aspect ratio */
+  border-radius: 6px; /* optional: rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+}
+/* Main container with form centered horizontally */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Form container */
+.container {
+  max-width: 500px;
+  background: white;
+  padding: 30px 40px;
+  margin: 0 20px; /* horizontal margin */
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(253, 160, 133, 0.3);
+  border: 3px solid #fd7e14; /* bright orange border */
+  transition: box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.container:hover {
+  box-shadow: 0 12px 40px rgba(253, 160, 133, 0.6);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d9480f; /* darker orange */
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 15px 0 8px 0;
+  font-weight: 700;
+  color: #6f2c00;
+}
+
+/* Inputs, selects, textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 2px solid #fd7e14;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff8f1;
+  color: #6f2c00;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #d9480f;
+  box-shadow: 0 0 8px #fd7e14aa;
+  outline: none;
+  background-color: #fff5e6;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Submit button */
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #fd7e14, #f6d365);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(253, 126, 20, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #d9480f, #fda085);
+  box-shadow: 0 6px 25px rgba(217, 72, 15, 0.8);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(45deg, #d9480f, #fda085);
+  color: white;
+  padding: 18px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 -4px 12px rgba(217, 72, 15, 0.6);
+  flex-shrink: 0;
+}
+
+footer a {
+  color: #fff9f1;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffe7c3;
+}
